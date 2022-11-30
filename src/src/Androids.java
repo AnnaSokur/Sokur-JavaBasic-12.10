@@ -1,0 +1,16 @@
+public class Androids implements Smartphones, LinuxOS {
+
+    @Override
+    public void call() {
+        System.out.println("I am an Android");
+        System.out.println("I can do calls");
+    }
+    @Override
+    public void sms() {
+        System.out.println("I can write the sms");
+    }
+    @Override
+    public void internet() {
+        System.out.println("I can use the Internet");
+    }
+}
