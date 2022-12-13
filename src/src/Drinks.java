@@ -1,5 +1,8 @@
-import java.util.Arrays;
+package src;
+
 import java.util.Scanner;
+
+import static src.DrinksMachine.*;
 
 public class Drinks {
     public static void main(String[] args) {
@@ -11,67 +14,51 @@ public class Drinks {
         final int MINERAL_WATER = 15;
         final int COCA_COLA = 20;
 
-        //2.тут константами задала ціну
-
-        //3.Сделайте подсчет количества сделанных напитков и общей суммы которую должен заплатить клиент-
-        //тут я не розумію як це записати - через сканер і запитати "скільки чашок чаю" чи якось через цикл
-
-        Scanner scanner = new Scanner(System.in);
-
-        void coffeePrepare () {
-            System.out.println("Чашка кофе стоит: " + COFFEE);
-        }
-
-        void teaPrepare () {
-            System.out.println("Чашка чая стоит: " + TEA);
-        }
-
-        void lemonadePrepare () {
-            System.out.println("Стакан лимонада стоит: " + LEMONADE);
-        }
-
-        void mojitoPrepare () {
-            System.out.println("Стакан мохито стоит: " + MOJITO);
-        }
-
-        void mineralWaterPrepare () {
-            System.out.println("Стакан минеральной воды стоит: " + MINERAL_WATER);
-        }
-
-        void cocaColaPrepare () {
-            System.out.println("Стакан кока колы стоит: " + COCA_COLA);
-        }
-
-        //4. методи приготування для кожного напою
-
-
         Scanner in = new Scanner(System.in);
-        in = new Scanner(System.in);
         System.out.print("Введите свой напиток: ");
 
-        switch (drinks) {     // не розумію чому дрінкс у свічі горить червонить
-            case DrinksMachine.COFFEE:
-                System.out.println(DrinksMachine.COFFEE + " - Цена - " + 40);
+        String choice = in.nextLine();
+        DrinksMachine drinksMachineChoice = DrinksMachine.valueOf(choice.toUpperCase());
+        switch (drinksMachineChoice) {
+            case COFFEE:
+                //треба викликати методи
                 break;
-            case DrinksMachine.TEA:
-                System.out.println(DrinksMachine.TEA + " - Цена - " + 30);
+            case TEA:
                 break;
-            case DrinksMachine.LEMONADE:
-                System.out.println(DrinksMachine.LEMONADE + " - Цена - " + 25);
+            case LEMONADE:
                 break;
-            case DrinksMachine.MOJITO:
-                System.out.println(DrinksMachine.MOJITO + " - Цена - " + 25);
+            case MOJITO:
                 break;
-            case DrinksMachine.MINERAL_WATER:
-                System.out.println(DrinksMachine.MINERAL_WATER + " - Цена - " + 15);
+            case MINERAL_WATER:
                 break;
-            case DrinksMachine.COCA_COLA:
-                System.out.println(DrinksMachine.COCA_COLA + " - Цена - " + 20);
+            case COCA_COLA:
                 break;
             default:
-
                 System.out.println("Что-нибудь еще? ДА/НЕТ");
         }
+    }
+    void coffeePrepare() {
+        System.out.println("Чашка кофе стоит: " + COFFEE);
+    }
+
+    void teaPrepare() {
+        System.out.println("Чашка чая стоит: " + TEA);
+    }
+
+    void lemonadePrepare() {
+        System.out.println("Стакан лимонада стоит: " + LEMONADE);
+    }
+
+    void mojitoPrepare() {
+        System.out.println("Стакан мохито стоит: " + MOJITO);
+    }
+
+    void mineralWaterPrepare() {
+        System.out.println("Стакан минеральной воды стоит: " + MINERAL_WATER);
+    }
+
+    void cocaColaPrepare() {
+        System.out.println("Стакан кока колы стоит: " + COCA_COLA);
     }
 
     //5. зробила switch-case
